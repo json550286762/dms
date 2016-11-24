@@ -88,4 +88,13 @@
   <session-config>
     <session-timeout>600</session-timeout>
   </session-config>
+  
+  <jsp-config>  
+        <taglib>  
+            <taglib-uri>/tlds/SelectDict</taglib-uri>  
+            <taglib-location>  
+                /WEB-INF/tlds/SelectDict.tld  
+            </taglib-location>  
+        </taglib>  
+    </jsp-config>
 </web-app>
