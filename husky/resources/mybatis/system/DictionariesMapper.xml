@@ -104,5 +104,16 @@
 			ZD_ID = #{ZD_ID}
 	</delete>
 	
+	<select id="findDictByBianma" parameterType="com.husky.entity.Dictionary" resultType="com.husky.entity.Dictionary">
+		SELECT 
+			S.ZD_ID			ZD_ID,
+			S.BIANMA		BIANMA,
+			S.NAME			NAME
+		FROM sys_dictionaries S 
+			LEFT JOIN sys_dictionaries T 
+		ON S.PARENT_ID = T.ZD_ID 
+		WHERE T.BIANMA = #{BIANMA}
+		ORDER BY ORDY_BY
+	</select>
 	
 </mapper>
