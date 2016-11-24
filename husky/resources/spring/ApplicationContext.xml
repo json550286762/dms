@@ -29,7 +29,7 @@
 	
 	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">  
 		<property name="locations">  
-			<list>  
+			<list> 
                  <value>/WEB-INF/classes/dbconfig.properties</value>  
             </list>  
         </property>  

@@ -7,6 +7,7 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 
 import com.husky.dao.DaoSupport;
+import com.husky.entity.Dictionary;
 import com.husky.entity.Page;
 import com.husky.util.PageData;
 
@@ -54,6 +55,20 @@ public class DictionariesService{
 		
 	}
 
-	
+	/**
+	 * 
+	* @Title: findDictByBianma 
+	* @Description: 查询编码对应得数据字典
+	* @author hxzhou
+	* @param @param page
+	* @param @return
+	* @param @throws Exception    
+	* @return List<PageData>    
+	* @throws
+	 */
+	public List<Dictionary> findDictByBianma(Dictionary dictionary) throws Exception {
+		return (List<Dictionary>) dao.findForList("DictionariesMapper.findDictByBianma", dictionary);
+		
+	}
 	
 }
